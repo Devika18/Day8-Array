@@ -1,24 +1,17 @@
 #!/bin/bash
 
-#array=( $(seq 1 100 ) )        #iterate the sequenceof numbers
+c=0
 
-for((i=0;i<100;i++))
+for ((a=0; a<100; a++))
 do
+ num=$a
+ rem=$(($num%10))
+ num=$((num/10))
 
-  for((j=0;j<100;j++))
-	do
-
-    if[ a[i] -eq a[j] ]
-    then
-	((count++))
-    fi
-  done
-
-  if[ count -gt 1 ]
-  then
-    repeats[i]=$count
-    echo "occurs" $a[i]
-    echo "times" $repeats[i]
-  fi
+if [ $rem -eq $num ]
+then
+ b[c++]=$a
+fi
+ echo ${b[@]}
 done
 
